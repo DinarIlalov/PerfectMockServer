@@ -14,7 +14,7 @@ func checkParams(in request: HTTPRequest) -> HTTPResponseStatus? {
     var status: HTTPResponseStatus?
     
     let accessToken = request.param(name: "access_token") ?? ""
-    if accessToken != "token" {
+    if accessToken.isEmpty {
         
         status = HTTPResponseStatus.unauthorized
         return status

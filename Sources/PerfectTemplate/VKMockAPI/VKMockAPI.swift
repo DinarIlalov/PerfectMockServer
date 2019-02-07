@@ -17,6 +17,8 @@ func VKMockAPIRoutes() -> Routes {
     routes.add(friendsRoutes())
     routes.add(groupsRoutes())
     
+    routes.add(imagesRoute())
+    
     return routes
     
 }
